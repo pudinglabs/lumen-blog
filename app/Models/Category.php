@@ -9,6 +9,7 @@ class Category extends Eloquent
     protected $table = 'categories';
 
     protected $fillable = [
+        '_id',
         'name',
     ];
 }

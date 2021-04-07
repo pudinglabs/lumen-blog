@@ -42,9 +42,8 @@ class CategoryController extends Controller
         ]);
 
         $this->repo->update($request->only($this->repo->getModel()->fillable), $id);
-        $category = $this->repo->find($id);
 
-        return response()->json($category);
+        return response()->json('Category successfully updated!');
     }
 
     public function delete($id)
