@@ -18,6 +18,14 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
+    // auth
+    $router->post('register', 'AuthController@register');
+    $router->post('login', 'AuthController@login');
+    $router->post('logout', 'AuthController@logout');
+    $router->post('refresh', 'AuthController@refresh');
+    $router->post('check', 'AuthController@check');
+
+    // category
     $router->get('/category', 'CategoryController@index');
     $router->get('/category/{id}', 'CategoryController@show');
     $router->post('/category', 'CategoryController@create');
