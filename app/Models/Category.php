@@ -10,6 +10,5 @@ class Category extends Eloquent
 
     protected $fillable = [
         'name',
-        'email',
     ];
 }

@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'v1'], function () use ($router) {
+    $router->get('/category', 'CategoryController@index');
+    $router->get('/category/{id}', 'CategoryController@show');
+    $router->post('/category', 'CategoryController@create');
+    $router->put('/category/{id}', 'CategoryController@update');
+    $router->delete('/category/{id}', 'CategoryController@delete');
+});
