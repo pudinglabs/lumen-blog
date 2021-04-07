@@ -1,0 +1,24 @@
+nginx:
+  build: docker/nginx
+  command: nginx -g "daemon off;"
+  links:
+    - php
+  ports:
+    - "8181:80"
+php:
+  build: docker/php
+  volumes:
+    - .:/var/www
+  working_dir: /var/www/public
+  command: php-fpm
+  environment:
+    APP_ENV: local
+    APP_DEBUG: 'true'
+    APP_KEY: 8b9f7d0c-9703-11eb-a8b3-0242ac130003
+    DB_CONNECTION: mongodb
+    DB_HOST: cluster0-shard-00-02.0piwd.mongodb.net
+    DB_PORT: 27017
+    DB_DATABASE: blog
+    DB_USERNAME: lumenUser
+    DB_PASSWORD: lumenUser
+    PHP_IDE_CONFIG: serverName=localhost
