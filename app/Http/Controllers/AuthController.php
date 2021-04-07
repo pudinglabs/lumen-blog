@@ -89,7 +89,7 @@ class AuthController extends Controller
                 'data' => [
                     'token' => $newToken,
                 ],
-            ], 200);
+            ], Response::HTTP_OK);
         } catch (\Exception $e) {
             return response()->json(['message' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
