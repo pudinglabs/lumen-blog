@@ -7,3 +7,8 @@
 -   `composer install`
 -   `php artisan jwt:secret`
 -   `php artisan migrate`
+-   `php artisan db:seed`
+
+## Unit Test
+
+-   `phpunit`
