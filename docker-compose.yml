@@ -22,3 +22,5 @@ php:
     DB_USERNAME: lumenUser
     DB_PASSWORD: lumenUser
     PHP_IDE_CONFIG: serverName=localhost
+    SENTRY_LARAVEL_DSN: https://a07beaf5ce6641628576a3b47c48cc7c@o566939.ingest.sentry.io/5710337
+    SENTRY_TRACES_SAMPLE_RATE: 1
