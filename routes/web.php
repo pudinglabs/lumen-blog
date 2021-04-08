@@ -18,6 +18,10 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
+    // external
+    $router->post('register', 'AuthController@register');
+    $router->post('login', 'AuthController@login');
+
     // auth
     $router->post('register', 'AuthController@register');
     $router->post('login', 'AuthController@login');
@@ -36,4 +40,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/categories', 'CategoryController@create');
     $router->put('/categories/{id}', 'CategoryController@update');
     $router->delete('/categories/{id}', 'CategoryController@delete');
+});
+
+$router->group(['prefix' => 'external'], function () use ($router) {
+    // external
+    $router->post('login', 'ExternalController@login');
+    $router->post('register', 'ExternalController@register');
 });
