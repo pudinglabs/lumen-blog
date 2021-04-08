@@ -9,6 +9,11 @@
 -   `php artisan migrate`
 -   `php artisan db:seed`
 
+## Fixer
+
+Please run this command in the root folder to fixing code standart
+-   `php-cs-fixer fix .`
+
 ## Unit Test
 
 -   `phpunit`
@@ -38,6 +43,22 @@ If everything works fine you can access this blog API at [localhost:8181](http:/
 ## Documentation
 After live you can see API documentation at [localhost:8181/api/documentation](http://localhost:8181/api/documentation)
 
+## Task Number 6
+
+```bash
+# Register
+curl --request POST \
+--location 'http://localhost:8181/external/register' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data 'email=eve.holt@reqres.in&password=pistol&password_confirmation=pistol'
+
+# Login
+curl --request POST \
+--location 'http://localhost:8181/external/login' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data 'email=eve.holt@reqres.in&password=cityslicka'
+```
+
 ## Task Number 7
 
 ```bash
@@ -50,5 +71,5 @@ php ArrayFilter.php
 #    [0] => 100000
 #    [1] => 150000
 #    [2] => 200000
-#)
+# )
 ```
