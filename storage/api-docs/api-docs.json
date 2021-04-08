@@ -1,0 +1,23 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Lumen Blog API",
+        "contact": {
+            "name": "Mustoharin",
+            "email": "suromoyo@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Return home page",
+                "responses": {
+                    "200": {
+                        "description": "version of lumen"
+                    }
+                }
+            }
+        }
+    }
+}
