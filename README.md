@@ -37,3 +37,18 @@ If everything works fine you can access this blog API at [localhost:8181](http:/
 
 ## Documentation
 After live you can see API documentation at [localhost:8181/api/documentation](http://localhost:8181/api/documentation)
+
+## Task Number 7
+
+```bash
+php ArrayFilter.php
+
+# Then result should be like this
+#
+# Array
+# (
+#    [0] => 100000
+#    [1] => 150000
+#    [2] => 200000
+#)
+```
